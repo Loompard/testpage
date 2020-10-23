@@ -5,6 +5,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Commissioner&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/themes/light.css" id="theme-link">
+    <title>TEST PAGE</title>
     <script src="script.js"></script>
   </head>
   <body>
@@ -12,7 +13,8 @@
     <div id="themeChooser">
         <img src="https://cdn.iconscout.com/icon/free/png-256/moon-1522720-1289406.png" alt="" draggable="false">
         <label id="themeSlider">
-            <input type="checkbox" onclick="changeTheme()">
+            <audio src="src/click.wav" id ="clickEvent"></audio>
+            <input type="checkbox" onclick="changeTheme(), playSound()">
             <span id="themeDot"></span>
         </label>
     </div>

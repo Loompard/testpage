@@ -1,5 +1,10 @@
 const theme = document.querySelector("#theme-link")
 
+function playSound() {
+    var audio = document.getElementById("clickEvent")
+    audio.play()
+}
+
 function invertImage(img){
     var canvas = document.createElement("canvas");
     canvas.width = img.width;
