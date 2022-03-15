@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="src/themes/light.css" id="theme-link">
     <title>TEST PAGE</title>
     <script src="script.js"></script>
+    <!--<script src="apikey.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   </head>
   <body>
     <img src="https://i.pinimg.com/originals/b9/c8/f8/b9c8f893c9a782033a01f47e0c0b1d6e.jpg" alt="" id="bgrd" draggable="false">
@@ -14,11 +16,39 @@
         <img src="https://cdn.iconscout.com/icon/free/png-256/moon-1522720-1289406.png" alt="" draggable="false">
         <label id="themeSlider">
             <audio src="src/click.wav" id ="clickEvent"></audio>
-            <input type="checkbox" onclick="changeTheme(), playSound()">
+            <input type="checkbox" onclick="changeTheme(), playSound()" id="themeSliderInput">
             <span id="themeDot"></span>
         </label>
     </div>
 
+    <!--<div id="mainContent">
+      <div id="subsCount">
+        <img src="https://yt3.ggpht.com/ytc/AAUvwniwf6FzneZfDEAfUnr_KxZ9-9H_rZdXDJaTAMILXg=s88-c-k-c0x00ffffff-no-rj" alt="" draggable="false" id="subsCountImg">
+        <div id="subCountText"></div>
+        <script>
+          
+          let number
+          $.getJSON(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${api.channel}&key=${api.key}`, function(data) {
+            number = data.items[0].statistics.subscriberCount
+            let subRusText
+            if(number%10 == 1 && number != 11) {
+              subRusText = "подписчик"
+            } else if(number%10 >= 2 && number%10 <= 4) {
+              subRusText = "подписчика"
+            } else if(number == 0 || (number%10 >= 11 && number%10 <= 20)){
+              subRusText = "подписчиков"
+            } else subRusText = "подписчиков"
+            let element = document.getElementById("subCountText")
+            element.innerHTML = `${number} ${subRusText}`
+            if(number - 1 + 1 >= 1000000) element.style.fontSize = "18px"
+            else element.style.fontSize = "20px"
+            element.style.fontFamily = "Commissioner"
+          })
+        </script>
+        <a href="https://youtube.com/Loompard" id="invisibleLink" target="_blank"></a>
+      </div>
+    </div>-->
+    
     <nav>
         <div id="bar">
             <div id="buttonHolder">

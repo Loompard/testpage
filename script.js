@@ -1,4 +1,5 @@
 const theme = document.querySelector("#theme-link")
+if(document.cookie == "theme=dark") changeTheme()
 
 function playSound() {
     var audio = document.getElementById("clickEvent")
@@ -29,13 +30,14 @@ function invertImage(img){
 }
 
 function changeTheme() {
+    playSound()
     if(theme.getAttribute("href") == "src/themes/light.css") {
+        document.getElementById("themeSliderInput").checked = true
         theme.href = "src/themes/dark.css"
+        document.cookie = "theme=dark"
+    } else {
+        document.getElementById("themeSliderInput").checked = false
+        theme.href = "src/themes/light.css"
+        document.cookie = "theme=light"
     }
-    else theme.href = "src/themes/light.css"
 }
-
-function alert() {
-    alert("HELLO")
-}
-

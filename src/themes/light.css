@@ -129,6 +129,41 @@ input:checked + #themeDot {
     transition: 0.3s;
 }
 
+
+#subsCount {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 275px;
+    height: 75px;
+    border-radius:500px;
+    padding: 10px 5px 10px 5px;
+    display: flex;
+    background: white;
+    justify-content: space-around;
+    align-items: center;
+    filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.5));
+}
+
+#invisibleLink {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+
+#subsCountImg {
+    height: 90%;
+    border-radius: 500px;
+}
+
+#subsCountText {
+    font-size: 36px;
+    width: auto;
+}
+
 /*::-webkit-scrollbar {
     width: 8px;
   }
