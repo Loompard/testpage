@@ -1,11 +1,5 @@
 const theme = document.querySelector("#theme-link")
 
-if(findCookie("theme") == "dark") {
-    document.getElementById("themeSliderInput").checked = true
-    theme.href = "src/themes/dark.css"
-    console.log("Theme is set to dark")
-} else console.log(`Theme is set to light because ${document.cookie}`)
-
 function playSound() {
     var audio = document.getElementById("clickEvent")
     audio.play()
@@ -54,4 +48,12 @@ function findCookie(name) {
         if(cookie[0] == name) return cookie[1]
     }
     return ""
+}
+
+function setTheme() {
+    if(findCookie("theme") == "dark") {
+        document.getElementById("themeSliderInput").checked = true
+        theme.href = "src/themes/dark.css"
+        console.log("Theme is set to dark")
+    } else console.log(`Theme is set to light because ${document.cookie}`)
 }
