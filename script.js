@@ -47,7 +47,7 @@ function findCookie(name) {
         let cookie = cookies[i].split("=")
         if(cookie[0] == name) return cookie[1]
     }
-    return ""
+    return " "
 }
 
 function setTheme() {
